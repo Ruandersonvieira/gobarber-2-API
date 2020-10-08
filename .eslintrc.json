@@ -27,6 +27,7 @@
         }
       ],
       "class-methods-use-this": "off",
+      "camelcase": "off",
       "prettier/prettier": "error"
     },
     "settings": {

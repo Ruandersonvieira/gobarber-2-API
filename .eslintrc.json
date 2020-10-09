@@ -28,7 +28,12 @@
       ],
       "class-methods-use-this": "off",
       "camelcase": "off",
-      "prettier/prettier": "error"
+      "prettier/prettier": "error",
+      "@typescript-eslint/no-unused-vars": [
+        "error",{
+        "argsIgnorePattern": "_"
+        }
+      ]
     },
     "settings": {
       "import/resolver": {

@@ -1,0 +1,21 @@
+import { Router } from 'express';
+
+import SessionService from '../services/SessionService';
+
+const sessionsRouter = Router();
+
+sessionsRouter.post('/', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    const sessionService = new SessionService();
+
+    const { user } = await sessionService.execute({ email, password });
+
+    return res.json(user);
+  } catch (err) {
+    return res.status(400).json({ error: err.message });
+  }
+});
+
+export default sessionsRouter;

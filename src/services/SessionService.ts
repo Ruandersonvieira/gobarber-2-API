@@ -11,13 +11,13 @@ interface RequestDTO {
   password: string;
 }
 
-interface ResonseDTO {
+interface ResponseDTO {
   user: User;
   token: string;
 }
 
 class SessionService {
-  public async execute({ email, password }: RequestDTO): Promise<ResonseDTO> {
+  public async execute({ email, password }: RequestDTO): Promise<ResponseDTO> {
     const usersRepository = getRepository(User);
 
     const user = await usersRepository.findOne({ where: { email } });

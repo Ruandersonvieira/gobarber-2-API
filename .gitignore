@@ -7,8 +7,10 @@ yarn-error.log*
 lerna-debug.log*
 
 # Temp 
-tmp/
+tmp/*
+!tmp/.gitkeep
 temp/
+!temp/.gitkeep
 
 # Compiled binary 
 dist
